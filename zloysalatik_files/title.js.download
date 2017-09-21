@@ -16,7 +16,7 @@ function loaded() {
 
 var x = 0;
 
-var titleText = [ "⠀", "Z", "Zl", "Zlo", "Zloy", "ZloyS", "ZloySa", "ZloySal", "ZloySala", "ZloySalat", "ZloySalati", "ZloySalatik", "ZloySalati", "ZloySalat", "ZloySala", "ZloySal", "ZloySa", "ZloyS", "Zloy", "Zlo", "Zl", "Z", "⠀"];
+var titleText = [ "⠀", "Z", "Zl", "Zlo", "Zloy", "ZloyS", "ZloySa", "ZloySal", "ZloySala", "ZloySalat", "ZloySalati", "ZloySalatik", "loySalatik", "oySalatik", "ySalatik", "Salatik", "alatik", "latik", "atik", "tik", "ik", "k", "⠀"];
 
 function loop() {
 
