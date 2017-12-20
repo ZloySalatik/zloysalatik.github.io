@@ -10,7 +10,7 @@ if (document.addEventListener) {
 
 function loaded() {
 
-    setInterval(loop, 400);
+    setInterval(loop, 250);
 
 }
 
