@@ -6,7 +6,7 @@ left: -2%;
 right: 0;
 bottom: 0;
 width: 105%;
-background-color: #696768;
+background-color: #000000;
 z-index: 999999;
 }
 
@@ -17,9 +17,9 @@ z-index: 999999;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 49px;
-	height: 49px;
-	background-color: rgb(255,255,255);
+	width: 80px;
+	height: 80px;
+	background-color: rgb(0,0,0);
 	box-sizing: border-box;
 		-o-box-sizing: border-box;
 		-ms-box-sizing: border-box;
@@ -33,7 +33,7 @@ z-index: 999999;
 }
 
 .cssload-container .cssload-moon {
-	border-bottom: 10px solid rgb(102,102,102);
+	border-bottom: 10px solid rgb(255,255,255);
 	border-radius: 50%;
 		-o-border-radius: 50%;
 		-ms-border-radius: 50%;
