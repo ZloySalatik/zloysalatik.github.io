@@ -1,148 +1,143 @@
+
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script language="Javascript" src="./zloysalatik_files/zloysalatik.js.download"></script>
-	<title>ZloySalatik</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="theme-color" content="#3b3b3b">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="./img/Favicon.png">
-	<link rel="stylesheet" href="./zloysalatik_files/bootstrap.min.css">
-	<link rel="stylesheet" href="./zloysalatik_files/averion.min.css">
-	<link rel="stylesheet" href="./zloysalatik_files/font-awesome.css">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZloySalatik</title>
+<link href="css/core.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+
+<link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.js"></script>
+<script language="Javascript" src="./zloysalatik_files/zloysalatik.js.download"></script>
+
+	
 	<link rel="stylesheet" href="./zloysalatik_files/font-awesome.min.css">
-	<link rel="stylesheet" href="./zloysalatik_files/animate.min.css">
-		<link rel="stylesheet" href="./zloysalatik_files/js.css">
-	<link rel="stylesheet" type="text/css" href="./zloysalatik_files/star-animation.css">
-	<link rel="stylesheet" href="./zloysalatik_files/css">
-	            <div class="bg-animation">
-               <div id="stars"></div>
-               <div id="stars2"></div>
-               <div id="stars3"></div>
-               <div id="stars4"></div>
-            </div>
-			<script>
-	    document.onkeypress = function (event) {
-        event = (event || window.event);
-        if (event.keyCode == 123) {
-           //alert('No F-12');
-            return false;
-        }
+	
+
+<style>    @font-face {
+        font-family: Rotonda Bold;
+        src: url(fonts/font.eot);
+        src: local(pompadur),url(fonts/Xolonium-Regular.ttf);
     }
-    document.onmousedown = function (event) {
-        event = (event || window.event);
-        if (event.keyCode == 123) {
-            //alert('No F-keys');
-            return false;
-        }
+    h1 {
+        font-family: Rotonda Bold,'Comic Sans MS',cursive;font-size: 400%;
     }
-document.onkeydown = function (event) {
-        event = (event || window.event);
-        if (event.keyCode == 123) {
-            //alert('No F-keys');
-            return false;
+    </style>
+    <style>        @font-face {
+            font-family: regular;
+            src: url(fonts/font.eot);
+            src: local(pompadour),url(fonts/font.ttf);
         }
-    }</script>
-    <script>document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-}, false);</script>
-    <!––add all the brackets in under this––>
-<!--<div class="overlay"><marquee bgcolor="black" height="60" scrollamount="35">                                                                                                                              </marquee></div>-->
+    h2 {font-family: regular,'Comic Sans MS',cursive;font-size: 200%;
+
+    }
+    </style>
+	<style>
+   .transparent75 {
+    filter: alpha(Opacity=75); /* Полупрозрачность для IE */
+    opacity: 0.75; /* Полупрозрачность для других браузеров */ 
+   }
+   .transparent50 {
+    filter: alpha(Opacity=50);
+    opacity: 0.05; 
+   }
+   .transparent20 {
+    filter: alpha(Opacity=20);
+    opacity: 0,2; 
+   }
+  </style>
+<script> 
+	document.onkeydown = function(e) { 
+	if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly. 
+	} 
+	return false; 
+	}; 
+	</script>
+<script> 
+	function click() { 
+	if (event.button==2||event.button==3) { 
+	oncontextmenu='return false'; 
+	} 
+	} 
+	document.onmousedown=click 
+	document.oncontextmenu = new Function("return false;") 
+	</script>
+<script>
+	function disableWheelScroll(){
+	if (document.body.addEventListener) document.body.addEventListener('DOMMouseScroll', blockWheel, false);
+	document.body.onmousewheel = blockWheel;
+	}
+	function blockWheel(event){
+	if (!event) event = window.event;
+	if (event.stopPropagation) event.stopPropagation();
+	else event.cancelBubble = true;
+	if(event.preventDefault) event.preventDefault();
+	else event.returnValue = false;
+	}
+	disableWheelScroll();
+	</script>
+	
+	
 </head>
-
-<body>
-
-<!--CSS Spinner-->
-<div class="cssload-container">
-	<div class="cssload-item cssload-moon"></div>
+<body onmousedown="return false" onselectstart="return false">
+<style>body{overflow:hidden}</style>
+<script>disableWheelScroll();</script>
+<div id="star" class="video mask overlay">
+<i class="volume-button fa fa-volume-up"></i>
+<i class="stop-button fa fa-pause"></i>
+<div class="video-fallback"></div>
+<video autoplay="1" loop="1" id="video">
+<source src="videos/video.mp4" type="video/mp4"/>
+Your browser does not support the video tag. I suggest you upgrade your browser.
+</video>
+<canvas class="cover"></canvas>
 </div>
+<div class="pageoverlay">
 
-	<div class="container" style="height: 100%; display: flex; align-items: center; margin: 0 auto; padding-top: 3rem;">
-		<main>
-		<div class="animated fadeInUp delay-250">
-			<div class="japanese">
-			<!--<center><div id="steamsprofile">
-    <div id="main_image"></div>
-	<img src="img/zloysalatik.jpg" class="overlay_image"/>
-</div>-->
-				<!--<p><font size ="2000" class="japanese">感</font></p>-->
-				<img src="./img/eye.png" alt="eyes" style="width:220px;height:220px;">
-			</div>
-			</div>
-			<div class="animated fadeInUp">
-			<H1><a href="http://steamcommunity.com/id/ZloySalatik" target="_blank">ZloySalatik</H1></div>
-<p><div class="animated fadeInUp"></div>
-		<font face="courier"></a>
+<div class="awrapper">
+<div class="titles fadeInUp">
+<img src="./img/eye.png" alt="eyes" style="width:220px;height:220px;"><h1><font color="white">Zloy</font><font color="white">Salatik</font><b><font size=4 color="red">♡</font></b></h1>
+ 
+</div>
+<div class="animated fadeInUp">
+			
+<h3><b><div class="animated fadeInUp">
+		<font></a>
 		<div class="animated fadeInUp">
 <div id="time"> 18:21:25</div></div>
 		<div class="animated fadeInUp">
 		<div id="date">sunday, february 5</div></div>
 		<div class="animated fadeInUp"></div>
-		<div class="container"></p>
-			      <center>
-		<div class="animated fadeInUp">			  
-      <p><font size="2">shoutout to</font></p>
-					  <marquee width="30%" class="japanese2" ><i><a href="https://osu.ppy.sh/u/6900614" target="_blank">Insinuo</a> ·  <a href="https://osu.ppy.sh/u/8855562" target="_blank">Bosfor</a> ·  <a href="https://osu.ppy.sh/u/9517058" target="_blank">NinjaFail</a> ·  <a href="https://osu.ppy.sh/u/8018852" target="_blank">pon4ik089</a> ·  <a href="https://osu.ppy.sh/u/8395783" target="_blank">fannerok</a></i></marquee>
+		<div class="container"></h3></b></font>
+<div class="media fadeInUp">
+</a>
+<a href="https://soundcloud.com/zloysalatik" id="MAL" target="_blank">
+<i class="fa fa-soundcloud"></i>
+</a>
+<a href="http://steamcommunity.com/id/ZloySalatik" id="steam" target="_blank">
+<i class="fa fa-steam"></i>
+</a>
+<a href="https://www.twitch.tv/zloysalatik" id="steam2" target="_blank">
+<i class="fa fa-twitch"></i>
+</a>
+<a href="https://www.youtube.com/ZloySalatik" id="steam2" target="_blank">
+<i class="fa fa-youtube-play"></i>
+</a>
+<a href="https://osu.ppy.sh/u/8006547" id="steam2" target="_blank">
+<i class="fa fa-heart-o"></i>
+    </a>
 </div>
-    </center>
-			<div class="animated fadeInUp">	
-			<ul class="list-inline social">
-				<li class="list-inline-item">
-					<a href="https://soundcloud.com/zloysalatik" target="_blank">
-						<i class="fa fa-soundcloud" aria-hidden="true"></i>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="http://steamcommunity.com/id/ZloySalatik" target="_blank">
-						<i class="fa fa-steam" aria-hidden="true"></i>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="https://www.twitch.tv/zloysalatik" target="_blank">
-					<i class="fa fa-twitch" aria-hidden="true"></i>
-					</a>
-				<li class="list-inline-item">
-					<a href="https://www.youtube.com/ZloySalatik" target="_blank">
-					<i class="fa fa-youtube" aria-hidden="true"></i>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="https://osu.ppy.sh/u/8006547" target="_blank">
-					<i class="fa fa-heart-o" aria-hidden="true"></i>
-					</a>
-			</li></ul>
 </div>
-
-			<footer>
-			</footer>
-			<video autoplay loop id="player" controls>
-            <source src="img/bg.mp4" type="video/mp4">
-        	</video>
-        	
-        	<script>
-				var x = document.getElementById("player").volume = 0.2;
-			</script>
-			<script src="./zloysalatik_files/jquery-2.1.4.min.js.download"></script>
+</div>
+</div>
+	<script src="./zloysalatik_files/jquery-2.1.4.min.js.download"></script>
 			<script src="./zloysalatik_files/title.js.download"></script>
 			<script src="./zloysalatik_files/main.js.download"></script>
-		<a href="https://iplogger.com/" target="_blank"><img src="https://iplogger.com/21KR5.gif" title="iplogger.com - IP Logging Service" border="0"></a>
-		
-		</main>
-						<!--<div id="info"><marquee bgcolor="black" height="60" scrollamount="35"><p><p><div class="japanese3"></div>-->
-	</div>
-	
 
-	   <script>
-$(document).ready(function() {
-//Preloader
-$(window).load(function() {
-preloaderFadeOutTime = 1500;
-function hidePreloader() {
-var preloader = $('.cssload-container');
-preloader.fadeOut(preloaderFadeOutTime);
-
-}
-hidePreloader();
-});
-});
-</script>
-
-</body></html>
+</body>
+</html>
