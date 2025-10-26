@@ -1,23 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZloySalatik</title>
 <link href="css/core.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="Favicon.png">
-<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="./zloysalatik_files/font-awesome.min.css">
 <link href="css/star-animation.css" rel="stylesheet">
 <!--NG  <link href="css/color.css" rel="stylesheet"> -->
-<script src="./zloysalatik_files/title.js.download"></script>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/plugins.min.js"></script>
-<script src="js/main.js"></script>
-<script language="Javascript" src="./zloysalatik_files/zloysalatik.js.download"></script>
+<script src="js/jquery.js" defer></script>
+<script src="js/bootstrap.min.js" defer></script>
+<script src="js/modernizr.custom.js" defer></script>
+<script src="js/plugins.min.js" defer></script>
+<script src="js/main.js" defer></script>
 
 <style>    @font-face {
         font-family: Rotonda Bold;
@@ -48,9 +45,26 @@
    }
    .transparent20 {
     filter: alpha(Opacity=20);
-    opacity: 0,2; 
+    opacity: 0.2; 
    }
   </style>
+<style id="visual-overrides">
+  body{color:#000000;text-shadow:2px 2px #ffffff}
+  .titles h1,.titles h2,.titles h3{color:#000000;text-shadow:2px 2px #ffffff}
+  .media,.media a{color:#000000;position:relative}
+  .media a:hover{color:#ffffff}
+  .logo-gif{display:block;margin:0 auto;width:clamp(160px,26vw,260px);height:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+  /* visual polish */
+  .mask:before{background:rgba(0,0,0,.5)}
+  .awrapper{align-items:center}
+  .titles h1{font-weight:700;letter-spacing:.02em;font-size:clamp(32px,10vw,72px)}
+  .media{font-size:clamp(28px,5vw,44px);margin-top:16px}
+  .media table{width:auto !important;margin:0 auto}
+  .media td{padding:0 10px}
+  .media i{transition:transform .2s ease,color .2s ease, text-shadow .2s ease, filter .2s ease}
+  .media a:hover i{transform:translateY(-2px) scale(1.05); color:#ffffff; text-shadow:0 0 8px rgba(255,255,255,.75),0 0 18px rgba(255,255,255,.5),0 0 32px rgba(255,255,255,.35); filter:drop-shadow(0 0 6px rgba(255,255,255,.25))}
+  a, .volume-button{cursor:url('cf.png'), auto !important}
+</style>
 <script> 
 	document.onkeydown = function(e) { 
 	if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly. 
@@ -93,7 +107,7 @@
 	<style>body{overflow:hidden}</style>
 	<script>disableWheelScroll();</script>
 	<div id="star" class="video mask overlay">
-	<i class="volume-button fa fa-volume-up"> 
+	<i class="volume-button fa fa-volume-off" aria-label="Toggle sound" role="button"> 
 
 
 <!-- chat 
@@ -103,9 +117,8 @@
 
 </div> </i>
 
-<i class="stop-button fa fa-pause"></i>
 <div class="video-fallback"></div>
-	<video autoplay="1" loop="1" id="video">
+	<video id="video" autoplay loop playsinline preload="auto" poster="images/overlay.png">
 		<source src="videos/video.mp4" type="video/mp4"/>
 	</video>
 <canvas class="cover"></canvas>
@@ -122,7 +135,7 @@
             </div>
 			-->
 <div class="titles fadeInUp">
-<img src="./img/test11.gif" alt="eyes" style="width:250px;height:250px;"><h1><font color="black">Zloy</font><font color="black">Salatik</font><b><font size=4 color=#ffffff>♡</font></b></h1>
+<img src="./img/test11.gif" alt="eyes" class="logo-gif"><h1><font color="black">Zloy</font><font color="black">Salatik</font><b><font size=4 color=#ffffff>♡</font></b></h1>
  
 
  
@@ -141,25 +154,25 @@
 <div class="media fadeInUp">
 
 <table width=380><tr><td>
-<a href="https://soundcloud.com/zloysalatik" id="MAL" target="_blank">
+<a href="https://soundcloud.com/zloysalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-soundcloud"></i>
 </a></td><td>
-<a href="http://steamcommunity.com/id/zloysalatik" id="MAL" target="_blank">
+<a href="https://steamcommunity.com/id/zloysalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-steam"></i>
 </a></td><td>
-<a href="https://www.twitch.tv/zloysalatik" id="MAL" target="_blank">
+<a href="https://www.twitch.tv/zloysalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-twitch"></i>
 </a></td><td>
-<a href="https://www.youtube.com/zloysalatik" id="MAL" target="_blank">
+<a href="https://www.youtube.com/zloysalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-youtube-play"></i>
 </a></td><td>
-<a href="https://osu.ppy.sh/u/zloysalatik" id="MAL" target="_blank">
+<a href="https://osu.ppy.sh/u/zloysalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-circle-o"></i>
 </a></td><td>
-<a href="https://open.spotify.com/user/zloysalatik" id="MAL" target="_blank">
+<a href="https://open.spotify.com/user/zloysalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-spotify"></i>
 </a></td><td>
-<a href="https://myanimelist.net/profile/ZloySalatik" id="MAL" target="_blank">
+<a href="https://myanimelist.net/profile/ZloySalatik" id="MAL" target="_blank" rel="noopener noreferrer">
 <i class="fa fa-trash"></i>
 </a></td>
 </tr>
@@ -170,10 +183,71 @@
 </div>
 </div>
 </div>
-	<script src="./zloysalatik_files/jquery-2.1.4.min.js.download"></script>
-			<script src="./zloysalatik_files/title.js.download"></script>
-			<script src="./zloysalatik_files/main.js.download"></script>
-			
+</div>
+<script>
+(function(){
+ function init(){
+  var v=document.getElementById('video');
+  var volBtn=document.querySelector('.volume-button');
+  
+
+  function updateVolumeIcon(){
+    if(!volBtn) return;
+    volBtn.classList.remove('fa-volume-off','fa-volume-up','fa-volume-down');
+    if(!v || v.muted || v.volume===0){ volBtn.classList.add('fa-volume-off'); }
+    else if(v.volume <= 0.34) { volBtn.classList.add('fa-volume-down'); }
+    else { volBtn.classList.add('fa-volume-up'); }
+  }
+  
+
+  if(v){
+   v.volume = 0.1;
+   v.muted = true;
+   if(v.play){ try{ v.play(); }catch(e){} }
+  }
+
+  if(volBtn && v){
+    var volToggle=function(e){
+      if(e){ e.preventDefault && e.preventDefault(); e.stopPropagation && e.stopPropagation(); }
+      v.muted = !v.muted;
+      if(!v.muted){ v.volume = 0.1; v.play && v.play().catch(function(){}); }
+      updateVolumeIcon();
+    };
+    volBtn.addEventListener('pointerdown', volToggle, {capture:true});
+    volBtn.addEventListener('mousedown', volToggle, {capture:true});
+    volBtn.addEventListener('touchstart', volToggle, {capture:true, passive:false});
+    volBtn.addEventListener('click', volToggle, {capture:true});
+  }
+
+  
+
+  // Date/time
+  var timeEl=document.getElementById('time');
+  var dateEl=document.getElementById('date');
+  if(timeEl&&dateEl){
+    var timeFmt=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+    var dateFmt=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric'});
+    function tick(){
+      var d=new Date();
+      timeEl.textContent=timeFmt.format(d);
+      dateEl.textContent=dateFmt.format(d).toLowerCase();
+    }
+    tick();
+    setInterval(tick,1000);
+  }
+
+  // Title hearts animation (original)
+  var x=0;
+  var titleText=["♥","❤"];
+  setInterval(function loop(){
+    document.getElementsByTagName("title")[0].innerHTML = titleText[x++%titleText.length];
+  },250);
+
+  updateVolumeIcon();
+ }
+ if(document.readyState==='complete'||document.readyState==='interactive'){init()}else{document.addEventListener('DOMContentLoaded',init)}
+})();
+</script>
 
 </body>
 </html>
