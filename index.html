@@ -252,6 +252,17 @@
  if(document.readyState==='complete'||document.readyState==='interactive'){init()}else{document.addEventListener('DOMContentLoaded',init)}
 })();
 </script>
+<script>
+  window.addEventListener('load', function() {
+    var video = document.getElementById('video');
+    if (video) {
+      video.load();
+      video.play().catch(function(e) {
+        console.error("Force video play failed on window load:", e);
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
