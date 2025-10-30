@@ -203,7 +203,11 @@
   if(v){
    v.volume = 0.1;
    v.muted = true;
-   if(v.play){ try{ v.play(); }catch(e){} }
+   v.addEventListener('canplay', function() {
+     v.play().catch(function(e) {
+       console.error("Video play failed:", e);
+     });
+   });
   }
 
   if(volBtn && v){
